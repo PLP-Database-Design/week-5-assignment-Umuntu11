@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid rgb(153, 8, 8);
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #525f5b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Patient Data</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Patient_Id</th>
+                <th>First_name</th>
+                <th>Last_name</th>
+                <th>Date_of_birth</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% patients.forEach(patient => { %>
+                <tr>
+                    <td><%= patient.patient_id %></td>
+                    <td><%= patient.first_name %></td>
+                    <td><%= patient.last_name %></td>
+                    <td><%= patient.date_of_birth %></td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+</body>
+</html>
